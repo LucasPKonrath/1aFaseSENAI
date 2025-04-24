@@ -58,3 +58,8 @@ function brinquedos(){
          alert("Você trouxe "+nBrinquedos+" Brinquedos, e vai receber " + Moedasrecebidas + " moedas")
     }
     }
+
+
+
+
+
