@@ -110,3 +110,4 @@ function exercicio1(){
             alert(nome + frase3)
         }
     }
+    
