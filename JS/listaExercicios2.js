@@ -119,3 +119,33 @@ function mostrarsenha(){
 //     contador +=2
 // }
 // alert("O contador é " + contador)
+let contagemcliques = 0
+function contadorcliques(){
+    contagemcliques++
+
+}
+
+function mostrarcliques(){
+    alert("Voce clicou: " + contagemcliques + " vezes")
+}
+
+function exercicio15(){
+    let min = 1
+    let max = 10
+    let acertou = false
+    let numeroaleartorio = Math.floor(Math.random() * (max - min) + min)
+    let tentativas = 0
+    while(acertou == false){
+        let numero = Number(prompt("Digite um número: "))
+
+        if(numeroaleartorio == numero){
+            alert("Você acertou " + numero)
+            acertou = true
+        }else {
+            tentativas++
+            alert("Você errou, o numero que voce tentou foi " + numero)
+            alert ("Você tentou " + tentativas + " vezes") 
+        } 
+
+    }
+}
