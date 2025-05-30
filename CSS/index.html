@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de compras</title>
     <link rel="stylesheet" href="style.css">
+    <title>Telas</title>
 </head>
-
 <body>
-    <div class="container_principal" id="container_principal">
-        <div class="titulo">
-            <h1>Lista de compras do Lucas</h1>
-            <button class="botao_cadastro" onclick="chamarCadastro()">Cadastrar novos itens</button>
+    <nav>
+        <button onclick="mostrarLogin()">Login</button>
+        <button onclick="mostrarCadastro()">Cadastro</button>
+        <button onclick="mostrarProdutos()">Produtos</button>
+    </nav>
+    <h1>Teste Login/Cadastro</h1>
+    <section id="login">
+        <h2>Login</h2>
+        <div class="containerInput">
+            <label for="">Nome</label>
+            <input type="text" id="inpLogNome">
         </div>
-        <div class="conteudo_lista">
-            <ol id="minhalista">
-                
-            </ol>
+        <div class="containerInput">
+            <label for="">Senha</label>
+            <input type="password" id="inpLogSenha">
+        </div>
+        <button onclick="logar()">Logar</button>
 
-        </div>
-    </div>
+    </section>
 
-    </div>
-    <div class="container_cadastro" id="container_cadastro">
-        <div class="titulo">
-            <h1>Cadastrar item</h1>
-            <button onclick="chamarVoltar()">Voltar</button>
+    <section id="cadastro">
+        <h2>Cadastro</h2>
+        <div class="containerInput">
+            <label for="">Nome</label>
+            <input type="text" id="inpCadNome">
         </div>
-        <div class="conteudo_cadastro">
-            <label for="nome">Nome do item</label>
-            <input type="text" nome="nome" id="nome">
-            <button onclick="adicionarItem()">Cadastrar</button>
+        <div class="containerInput">
+            <label for="">E-mail</label>
+            <input type="text" id="inpCadEmail">
         </div>
-    </div>
+        <div class="containerInput">
+            <label for="">Senha</label>
+            <input type="password" id="inpCadSenha">
+        </div>
+        <button onclick="cadastrar()">Cadastrar</button>
+    </section>
+
+    <section id="produtos">
+        <h2>Produtos</h2>
+
+    </section>
 
     <script src="script.js"></script>
 </body>
-
 </html>
+
+<!-- emmet vs code -->
