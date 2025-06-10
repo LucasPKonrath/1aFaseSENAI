@@ -28,6 +28,11 @@
     width: 300px;
     min-height: 100px;
 }
+
+#navbar{
+    display: none;
+}
+
 #produtos{
     display: none;
 }
@@ -61,4 +66,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.bt-secundario{
+    background-color: grey;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
 }

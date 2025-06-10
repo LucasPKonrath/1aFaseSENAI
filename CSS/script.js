@@ -1,33 +1,46 @@
 
 // let nome, email, senha
  inicializar()
- let usuario = {
-     nome: '',
-     email: '',
-     senha: ''
-}
+ 
+ let usuarios = []
+
+ // let nomesTeste = ["Usuario 1", "Usuario 2"]
+
+
 
 function cadastrar(){
+    let usuario = {
+        nome:  document.getElementById("inpCadNome").value,
+        email: document.getElementById("inpCadEmail").value,
+        senha: document.getElementById("inpCadSenha").value
+    }
+
     usuario.nome = document.getElementById("inpCadNome").value
     usuario.email = document.getElementById("inpCadEmail").value
     usuario.senha = document.getElementById("inpCadSenha").value
-    alert("Cadastrado com sucesso")
 
-    console.log(usuario)
-
+    usuarios.push(usuario)
     limparInputs()
     mostrarLogin()
+
+    alert("Cadastrado com sucesso")
+
+    console.log(usuario) // só pra teste
 }
 function logar(){
     let nome = document.getElementById("inpLogNome").value
     let senha = document.getElementById("inpLogSenha").value
 
-    if(nome === usuario.nome && senha === usuario.senha){
-        alert("Login efetuado com sucesso!")
-        limparInputs()
-        mostrarProdutos()
-    }else{
-        alert("Login não efetuado sem sucesso!")
+    for(let i=0; i<usuarios.length; i++){
+        if((nome === usuarios[i].nome || nome === usuarios[i].email) && senha === usuarios[i].senha){
+            alert("Login efetuado com sucesso! Olá " + usuarios[i].nome)
+            limparInputs()
+            mostrarProdutos()
+        }//else{
+        //     alert("Login não efetuado sem sucesso!")
+
+        // }
+
     }
 }
 
@@ -46,6 +59,7 @@ function mostrarCadastro(){
 function mostrarProdutos(){
     esconderTodas()
     document.getElementById('produtos').style.display = 'flex'
+    document.getElementById('navbar').style.display = 'flex' // faz a navbar aparecer
 
 }
 function esconderTodas(){
@@ -66,6 +80,6 @@ function limparInputs(){
 
 function inicializar(){
     mostrarLogin()
-    alert("Seja bem vindo")
+    // alert("Seja bem vindo")
 
 }
